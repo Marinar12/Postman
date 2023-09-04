@@ -150,13 +150,13 @@ let repsPets = respFamily.pets;
 let respDog = repsPets.dog 
 
 pm.test("Dog has name", function () {
-    pm.expect(JSON.stringify(respDog)).to.include("name");
+    pm.expect(respDog).to.haveOwnProperty("name");
 });
 
 10. Проверить, что у параметра dog есть параметры age.
 
 pm.test("Dog has age", function () {
-    pm.expect(JSON.stringify(respDog)).to.include("age");
+    pm.expect(respDog).to.haveOwnProperty("age");
 });
 
 11. Проверить, что параметр name имеет значение Luky.
